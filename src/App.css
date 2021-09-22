@@ -1,1 +1,11 @@
+h2 {
+  text-align: center;
+}
 
+.alignNavbar {
+  margin-left: 1rem;
+}
+
+.alignLogo {
+  margin-right: 1rem;
+}
