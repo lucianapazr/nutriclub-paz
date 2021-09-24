@@ -2,6 +2,8 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import {Navbar,Container,Nav,NavDropdown} from 'react-bootstrap';
 import logo from './img/logo_grande.png';
+import CartWidget from './CartWidget';
+
 
 const NavBar = () => {
     return (
@@ -24,6 +26,7 @@ const NavBar = () => {
         <Nav.Link href="" className="alignNavbar">Tienda</Nav.Link>
         <Nav.Link href="" className="alignNavbar">Contacto</Nav.Link>
       </Nav>
+      <CartWidget number={1}/>
     </Navbar.Collapse>
   </Container>
 </Navbar>
