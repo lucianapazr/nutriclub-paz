@@ -9,3 +9,14 @@ h2 {
 .alignLogo {
   margin-right: 1rem;
 }
+
+.spanCounter {
+  width: 100px;
+  display: inline-block;
+}
+
+.btnAgregar {
+  width: 170px;
+  display: inline-block;
+  height: 40px;
+}

@@ -1,6 +1,7 @@
 import './App.css';
-import ItemListContainer from './components/ItemListContainer';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
+import ItemCount from './components/ItemCount';
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <h2>Próximamente...</h2>
       <ItemListContainer text="Tu carro" number={1}/>
       <ItemListContainer text="Tu carro" number={0}/>
+      <ItemCount/>
     </>
   );
 }

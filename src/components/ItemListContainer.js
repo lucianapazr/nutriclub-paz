@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 
-const ItemListContainer = () => {
+const ItemListContainer = (props) => {
     const {text, number} = props;
     return (
         number<1 ?
