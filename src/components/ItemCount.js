@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import "../App.css";
-import ButtonGroup from "react-bootstrap/Button";
+import React, { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
-const ItemCount = ({cantidad = 1 , stock = 0 , initial = 1}) => {
-    const [count, setCount] = useState(initial);
-
-    const onAdd = () => {
-        if (count <= (stock - cantidad)) {
-            setCount(count + cantidad)
-        }
-    }
-
-    const handlerRestart = () => {
-        if (count > cantidad -1) {
-            setCount(count - cantidad);
-        }
-    }
-
-    return (
-        <>
-            <ButtonGroup size="lg" className="mb-2" variant="secondary">
-                <i class="bi bi-dash-circle-fill" onClick={handlerRestart}></i>
-                <span className="spanCounter">{count}</span>
-                <i class="bi bi-plus-circle-fill" onClick={onAdd}></i>
-            </ButtonGroup>
-            <br/>
-            <button type="button" class="btn btn-outline-primary btnAgregar">
-                <p>Agregar al carrito</p>
-            </button>
-        </>
+const ItemCount = ({stock,initial}) =>{
+    const [value,setValue] = useState(initial)
+    const onAdd = () => value<stock ? (setValue(value+1)) : console.log("limite de stock");
+    const onSubstract = () => value>initial ? (setValue(value-1)) : console.log ("limite es 0");
+    
+    return (
+        <div>
+            <div className="my-2">
+                <div className="btn-group">
+                    <button className="btn btn-outline-success" type="button" onClick={onSubstract}>-</button>
+                    <h5 className="mx-5">{value}</h5>
+                    <button className="btn btn-outline-success" type="button" onClick={onAdd}>+</button>
+                </div>
+            </div>
+            <button className="my-1 px-4 btn btn-outline-success">Añadir al carrito</button>
+        </div>
     )
 }
 
-export default ItemCount
+export default ItemCount;
