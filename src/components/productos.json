@@ -1,0 +1,56 @@
+[
+    {
+        "id": 0,
+        "title": "Basta de dietas",
+        "author": "Estefanía Beltrami",
+        "stock": 45,
+        "cost": 1500,
+        "description": "Lorem Ipsum",
+        "pictureUrl": "https://entelequia.com.ar/wp-content/uploads/2021/06/123412-29.jpg"
+    },
+    {
+        "id": 1,
+        "title": "Más de 100 ideas para tus comidas",
+        "author": "Estefanía Beltrami",
+        "stock": 18,
+        "cost": 1200,
+        "description": "Lorem Ipsum",
+        "pictureUrl": "https://kbimages1-a.akamaihd.net/abb79229-1e99-4d05-bf52-39fa5c04a76d/1200/1200/False/mas-de-100-ideas-para-tus-comidas.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Recetas saludables",
+        "author": "Estefanía Beltrami",
+        "stock": 6,
+        "cost": 600,
+        "description": "Lorem Ipsum",
+        "pictureUrl": "https://lh3.googleusercontent.com/proxy/WnYnDH591PtyRw7dug8bbeNmXspGvlxxuHMknIpoovSy19rBVXB_uVOYYWUHHeJ7CqiyJF5yisC0D1BH10DUC738_z_1nzUD_xJ1d1cBIHtX2C3u87ICWQBvKeiYozxH"
+    },
+    {
+        "id": 3,
+        "title": "Guía semanal",
+        "author": "Estefanía Beltrami",
+        "stock": 23,
+        "cost": 500,
+        "description": "Lorem Ipsum",
+        "pictureUrl": "https://1.bp.blogspot.com/-chCNzRwuuKM/W1VCraBX7PI/AAAAAAAA99w/9RilFkpW2o86_5pJLcxwACrESU8_je54wCLcBGAs/s1600/Meal%2Bprep%2BGu%25C3%25ADa%2Bsemanal%2Bpara%2Bplanificar%2Btus%2Bcomidas-1.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Fiestas: Recetario salado",
+        "author": "Estefanía Beltrami",
+        "stock": 10,
+        "cost": 600,
+        "description": "Lorem Ipsum",
+        "pictureUrl": ""
+    },
+    {
+        "id": 5,
+        "title": "Fiestas: Recetario dulce",
+        "author": "Estefanía Beltrami",
+        "stock": 8,
+        "cost": 600,
+        "description": "Lorem Ipsum",
+        "pictureUrl": ""
+    }
+]

@@ -31,16 +31,10 @@ const ItemListContainer = () => {
 
     return (
         <div className="container">
-            <Catalogo text='Catálogo' />
             <ItemList product={products} />
         </div>
     ) 
 
-}
-
-const Catalogo = (props) => {
-    const jsx = <h1>{props.text}</h1>;
-    return jsx;
 }
 
 export default ItemListContainer
