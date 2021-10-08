@@ -1,18 +1,34 @@
+import React from 'react';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './App.css';
+import 'bootstrap';
+import Componente from './components/Componente';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
-import ItemCount from './components/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer';
 
-function App() {
+
+const App = () => {
   return (
-    <>
-      <NavBar />
-      <h2>Próximamente...</h2>
-      <ItemListContainer text="Tu carro" number={1}/>
-      <ItemListContainer text="Tu carro" number={0}/>
-      <ItemCount/>
-    </>
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route exact path='/'>
+            <ItemListContainer />
+          </Route>
+          <Route exact path='/categoria/:id'>
+            <ItemListContainer />
+          </Route>
+          <Route exact path='/item/:id'>
+            <ItemDetailContainer />
+          </Route>
+          <Componente texto="Tu carro" numero={1}/>
+          <Componente texto="Tu carro" numero={0}/>
+        </Switch>
+      </Router>
+    
   );
 }
+
 
 export default App;
