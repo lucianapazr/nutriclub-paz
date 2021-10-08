@@ -1,15 +1,22 @@
 import ItemCount from './ItemCount'
+import { Container, Row, Col } from 'react-bootstrap'
 
 const ItemDetail = ({ product }) => {
     return (
-        <article className="item">
-            <h2>{product.title} - {product.author}</h2>
-            <img className="w-25" variant="top" src={product.pictureUrl} alt={product.title} />
-            <h3>${product.cost}</h3>
-            <ItemCount stock={product.stock} initial={0}/>
-            <p>Stock: {product.stock}</p>         
-            <p>{product.description}</p>
-        </article>
+        <Container>
+            <h2 className="text-center">{product.title} - {product.author}</h2>
+            <Row className="justify-content-md-center">
+                <Col xs lg="2">            
+                    <img className="w-100" variant="top" src={product.pictureUrl} alt={product.title} />         
+                </Col>
+                <Col md="auto">
+                    <p>{product.description}</p>
+                    <h3 className="text-center">${product.cost}</h3>
+                    <ItemCount stock={product.stock} initial={0}/>
+                    <p className="text-center">Stock: {product.stock}</p>
+                </Col>
+            </Row>
+        </Container>
     );
 }
 
