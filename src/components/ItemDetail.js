@@ -9,7 +9,7 @@ const ItemDetail = ({ product }) => {
     let history = useHistory();
 
     const [contadorDetail, setContadorDetail] = useState(0);
-    const {removeItem, setCarrito, carrito, setContador, contador} = useContext(CartContext);
+    const {setCarrito, carrito, setContador, contador} = useContext(CartContext);
 
     const handleClick = (cantidad) => {
         setContadorDetail(cantidad)
@@ -48,7 +48,7 @@ const ItemDetail = ({ product }) => {
             }
 
         } else {
-            alert("NO HAY PRODCUTOS PARA AGREGAR AL CARRITO")
+            alert("NO HAY PRODTOS PARA AGREGAR AL CARRITO")
         }
     }
 

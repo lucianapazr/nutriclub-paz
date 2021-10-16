@@ -27,7 +27,7 @@ const NavBar = () => {
                 <Nav.Link href="" className="alignNavbar">Recetas</Nav.Link>
                 <Nav.Link href="" className="alignNavbar">Contacto</Nav.Link>
               </Nav>
-              <CartWidget number={1}/>
+              <CartWidget/>
             </Navbar.Collapse>
           </Container>
         </Navbar>

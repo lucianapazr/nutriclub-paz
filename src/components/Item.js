@@ -1,22 +1,24 @@
-import React from 'react'
+import React, {Fragment} from 'react'
 import { Link } from 'react-router-dom';
-import { Card } from 'react-bootstrap';
 
 const Item = ({product}) =>{
 
     return (
-        <div>
-            <Link to={`/item/${product.id}`}>
-                <Card className="text-center my-2">
-                    <Card.Header>{product.title} - {product.author}</Card.Header>
-                    <Card.Body>
-                        <Card.Img className="w-25" variant="top" src={product.pictureUrl} alt={product.title} />
-                        <Card.Text>${product.cost}</Card.Text>
-                    </Card.Body>
-                    <Card.Footer className="text-muted">Stock: {product.stock}</Card.Footer>
-                </Card>
-            </Link>         
-        </div>
+        <Fragment>
+            <div className="card m-4">
+                <img src={product.image} className="card-img-top" alt={product.title} />
+                <div className="card-body">
+                    <h5 className="card-title">
+                        {product.title} - {product.author}
+                    </h5>
+                    <li className="list-group-item m-2">Stock: {product.stock}</li>
+                    <li className="list-group-item m-2">$ {product.price}</li>
+                    <Link to={`/item/${product.id}`} className="btn btn-primary">
+                        Ver más
+                    </Link>
+                </div>
+            </div>
+        </Fragment>
     )
 }
 
