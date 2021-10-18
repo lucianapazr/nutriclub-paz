@@ -5,10 +5,12 @@ import 'bootstrap';
 import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import ProviderCustomizado from './components/CartContext';
 
 
 const App = () => {
   return (
+      <ProviderCustomizado>
       <Router>
         <NavBar />
         <Switch>
@@ -23,6 +25,7 @@ const App = () => {
           </Route>
         </Switch>
       </Router>
+      </ProviderCustomizado>
     
   );
 }

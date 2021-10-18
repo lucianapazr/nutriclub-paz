@@ -9,48 +9,48 @@ const ItemDetail = ({ product }) => {
     let history = useHistory();
 
     const [contadorDetail, setContadorDetail] = useState(0);
-    const {setCarrito, carrito, setContador, contador} = useContext(CartContext);
+    //const {setCarrito, carrito, setContador, contador} = useContext(CartContext);
 
     const handleClick = (cantidad) => {
         setContadorDetail(cantidad)
     }
 
-    const onAdd = (cantidad) => {
-        const itemConCantidad = {...product, cantidad}
+    // const onAdd = (cantidad) => {
+    //     const itemConCantidad = {...product, cantidad}
 
-        let flag = false;
-        let counter = 0
+    //     let flag = false;
+    //     let counter = 0
 
-        if (cantidad !== 0) {
-            if (carrito.length > 0) {
-                counter = 0
-                carrito.forEach(item => {
-                    if (itemConCantidad.id === item.id) {
-                        item.cantidad += itemConCantidad.cantidad
-                        setCarrito(carrito)
-                        handleClick(cantidad)
-                        flag = true
-                    }
-                    counter += item.cantidad
-                })
-                setContador(counter)
-                if (!flag) {
-                    counter = contador
-                    counter += cantidad
-                    setContador(counter)
-                    setCarrito([...carrito, itemConCantidad])
-                    handleClick(cantidad)
-                }
-            } else {
-                setContador(itemConCantidad.cantidad)
-                setCarrito([itemConCantidad])
-                handleClick(cantidad)
-            }
+    //     if (cantidad !== 0) {
+    //         if (carrito.length > 0) {
+    //             counter = 0
+    //             carrito.forEach(item => {
+    //                 if (itemConCantidad.id === item.id) {
+    //                     item.cantidad += itemConCantidad.cantidad
+    //                     setCarrito(carrito)
+    //                     handleClick(cantidad)
+    //                     flag = true
+    //                 }
+    //                 counter += item.cantidad
+    //             })
+    //             setContador(counter)
+    //             if (!flag) {
+    //                 counter = contador
+    //                 counter += cantidad
+    //                 setContador(counter)
+    //                 setCarrito([...carrito, itemConCantidad])
+    //                 handleClick(cantidad)
+    //             }
+    //         } else {
+    //             setContador(itemConCantidad.cantidad)
+    //             setCarrito([itemConCantidad])
+    //             handleClick(cantidad)
+    //         }
 
-        } else {
-            alert("NO HAY PRODTOS PARA AGREGAR AL CARRITO")
-        }
-    }
+    //     } else {
+    //         alert("NO HAY PRODTOS PARA AGREGAR AL CARRITO")
+    //     }
+    // }
 
     let pathDefault = '/'
     let pathCart = '/Cart'
@@ -67,9 +67,9 @@ const ItemDetail = ({ product }) => {
                         <h1>{product.title}</h1>
                         <h5>Descripción: {product.description}</h5>
                         <h5>Precio: {product.price}</h5>
-                        {contadorDetail === 0 &&
+                        {/* {contadorDetail === 0 &&
                         <ItemCount stock={product.stock} initial={0} onAdd={onAdd}/>
-                        }
+                        } */}
                         {contadorDetail !== 0 &&
                         <Fragment>
                             <h5>Cantidad seleccionada: {contadorDetail}</h5>

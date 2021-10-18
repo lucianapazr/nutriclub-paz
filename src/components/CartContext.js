@@ -1,23 +1,23 @@
 import {createContext, useState} from "react";
 export const CartContext = createContext()
-const {Provider} = CartContext
+//const {Provider} = CartContext
 
 export const ProviderCustomizado = ({children}) => {
 
     const [carrito, setCarrito] = useState([]);
-    const [contador, setContador] = useState(0);
+   // const [contador, setContador] = useState(0);
 
-    const valorDelContexto = {
-        carrito,
-        setCarrito,
-        contador,
-        setContador
-    }
+    //const valorDelContexto = {
+      //  carrito,
+        //setCarrito,
+        //contador,
+        //setContador
+    //}
 
     return(
-        <Provider value={valorDelContexto}>
+        <CartContext.Provider value={{carrito, setCarrito}}>
             {children}
-        </Provider>
+        </CartContext.Provider>
     )
 }
 

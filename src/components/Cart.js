@@ -4,24 +4,24 @@ import {Link} from "react-router-dom";
 
 function Cart(props) {
 
-    const {carrito, setCarrito, setContador, contador} = useContext(CartContext);
+    //const {carrito, setCarrito, setContador, contador} = useContext(CartContext);
 
     const totalCarrito = [0]
     let carritoProductos = []
 
     function removeProduct(item) {
-        carritoProductos = carritoProductos.filter(producto => producto.id !== item.id)
-        setCarrito(carritoProductos)
-        let counter = 0
-        carritoProductos.map(item2=>{
-            counter += item2.cantidad
-        })
-        setContador(counter)
+        // carritoProductos = carritoProductos.filter(producto => producto.id !== item.id)
+        // setCarrito(carritoProductos)
+        // let counter = 0
+        // carritoProductos.map(item2=>{
+        //     counter += item2.cantidad
+        // })
+        // setContador(counter)
     }
 
     function removeAll() {
-        setCarrito([])
-        setContador(0)
+        // setCarrito([])
+        // setContador(0)
     }
 
     if (contador){
