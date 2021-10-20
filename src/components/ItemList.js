@@ -12,7 +12,7 @@ const ItemList = ({product}) =>{
             {product.length ? (
                 product.map((product) => <Item product={product} />)
             ) : (
-                <Spinner animation="border" variant="primary" />
+                <Spinner className="my-4" animation="border" variant="primary" />
             )}
         </div>
     )

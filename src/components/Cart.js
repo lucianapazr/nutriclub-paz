@@ -14,7 +14,7 @@ function Cart(props) {
         setCarrito(carritoProductos)
         let counter = 0
         carritoProductos.map(item2=>{
-             counter += item2.cantidad
+            counter += item2.cantidad
         })
         setContador(counter)
     }

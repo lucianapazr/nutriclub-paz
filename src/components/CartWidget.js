@@ -11,12 +11,11 @@ function CartWidget(props) {
     return (
         <div  style={{visibility: contador === 0 ? "hidden" : "visible",}} className={'d-flex align-items-center'}>
             <li>
-                <Link to={'Cart'} className="cartIcon"><FaShoppingCart /></Link>
+                <Link to={'Cart'}><FaShoppingCart /></Link>
             </li>
             <span style={{color: "white"}}>
                 {contador}
             </span>
-
         </div>
     );
 }

@@ -9,7 +9,7 @@ const ItemDetail = ({ product }) => {
     let history = useHistory();
 
     const [contadorDetail, setContadorDetail] = useState(0);
-    const {setCarrito, carrito, setContador, contador} = useContext(CartContext);
+    const {removeItem, setCarrito, carrito, setContador, contador} = useContext(CartContext);
 
     const handleClick = (cantidad) => {
         setContadorDetail(cantidad)
@@ -76,7 +76,6 @@ const ItemDetail = ({ product }) => {
                             <Link className="btn btn-success m-3" to={pathCart}>Terminar mi compra</Link>
                         </Fragment>
                         }
-
                     </div>
                 </div>
                 <button className={'btn btn-primary m-3'} onClick={() => history.goBack()}>

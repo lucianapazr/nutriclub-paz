@@ -7,13 +7,13 @@ import { useParams } from 'react-router-dom';
 const ItemDetailContainer = () => {
 
     const [product, setProduct] = useState({});
-    const { id: idProduct } = useParams();
+    const { id } = useParams();
 
     useEffect(() => {
         const getItems = () => {
         return new Promise((res, rej) => {
             const buscarProducto = libros.find(
-                (item) => item.id === parseInt(idProduct)
+                (item) => item.id === parseInt(id)
             );
             setTimeout(() => {
                 res(buscarProducto);
@@ -24,7 +24,7 @@ const ItemDetailContainer = () => {
         getItems()
         .then((res) => setProduct(res))
         .catch((Error) => console.log(Error));
-    }, [idProduct]);
+    }, [id]);
 
     return <ItemDetail product={product}/>;
 }
